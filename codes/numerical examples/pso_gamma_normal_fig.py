@@ -92,7 +92,7 @@ z_ = log_lik_gamma_normal(xxyy_rest, x=x).reshape((n, m))
 # PLOT normal loss fct
 plt.subplot(131)
 plt.title("Negative log liklihood of Normal parameters")
-plt.contourf(xx, yy, z_, 15, cmap='summer', alpha=0.5)
+plt.contourf(xx, yy, z_, 15, cmap='rainbow', alpha=0.5)
 plt.colorbar()
 plt.xlabel("mu")
 plt.ylabel("sigma square")
@@ -124,7 +124,7 @@ z_ = log_lik_gamma_normal(xxyy_rest, x=x)
 
 # PLOT lambda loss fct
 plt.subplot(133)
-plt.title("Negative log liklihood of lambda parameter")
+plt.title("Negative log likelihood of lambda parameter")
 plt.plot(xx, z_, c="green")
 plt.xlabel("Lambda")
 plt.ylabel("Negative log likelihood")
