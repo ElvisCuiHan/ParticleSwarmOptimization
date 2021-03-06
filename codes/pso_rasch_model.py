@@ -1,12 +1,7 @@
 import pyswarms as ps
-from pyswarms.utils.functions import single_obj as fx
-from pyswarms.utils.plotters import plot_cost_history, plot_contour, plot_surface
 import matplotlib.pyplot as plt
-import scipy
-import numpy as np
+from scipy.optimize import fsolve
 import pandas as pd
-from sklearn.linear_model import LinearRegression, Lasso, Ridge
-from sklearn.preprocessing import StandardScaler
 from codes.API.EM_Rasch_API import *
 
 def Rasch_MMLE(particles, parameters):
@@ -32,12 +27,11 @@ def Rasch_MMLE(particles, parameters):
     log_lik = np.zeros((particles.shape[0]))
 
     for i in range(particles.shape[0]):
-        initial_value = particles[i]  # (I+2)
+        initial_value = particles[i]  # (I+1)
 
-        # set-up parameters to be updated (parameters is an (I+2) vector)
+        # set-up parameters to be updated (parameters is an (I+1) vector)
         betas = initial_value[:I]
         sigma = np.abs(initial_value[I])
-        mu = initial_value[I + 1]
 
         # Gaussian-Hermite nodes and weights
         nodes, weights = np.polynomial.hermite.hermgauss(nodes_num)
@@ -45,12 +39,6 @@ def Rasch_MMLE(particles, parameters):
         nodes *= np.sqrt(2)
 
         ### Calculate marginal log-likelihood
-
-        # Initialize marginals: Nx1 vector
-        marginal = np.zeros(N)
-
-        # Adjust nodes
-        nodes = nodes + mu
 
         # Calculate marginals: Nx1 vector
         marginal = (f_y(Y, betas, sigma, nodes) * H(nodes, fct="one")).dot(weights)
@@ -65,22 +53,56 @@ Y = data[:, :24]
 N, I = np.shape(Y)
 G = 1
 beta_init = 0.5 * np.ones((I, G)); sigma_init = 2 * np.ones((1, G))
-pi_init = [1 / G] * G; mu_init = [0] * G
-init_value = np.vstack((beta_init, sigma_init, mu_init))
+init_value = np.vstack((beta_init, sigma_init))
 
-bounds = [tuple(np.hstack((np.repeat(-np.inf, (I+2))))),
-          tuple(np.hstack((np.repeat(np.inf, (I+2)))))]
+bounds = [tuple(np.hstack((np.repeat(-np.inf, (I+1))))),
+          tuple(np.hstack((np.repeat(np.inf, (I+1)))))]
 
+"""PSO algorithm"""
 # Set-up hyperparameters
 options = {'c1': 0.5, 'c2': 0.3, 'w':0.9}
-n = 20
+n = 50
 init_pos = np.repeat(init_value.reshape((-1,1)), n, axis=1).T
 # Call instance of PSO
-optimizer = ps.single.GlobalBestPSO(n_particles=n, dimensions=(I+2), options=options, bounds=bounds, init_pos=init_pos)
+optimizer = ps.single.GlobalBestPSO(n_particles=n, dimensions=(I+1), options=options, bounds=bounds, init_pos=init_pos)
 # Perform optimization
 best_cost, best_pos = optimizer.optimize(Rasch_MMLE, iters=100, parameters=(Y, 21))
 
-plt.figure(figsize=(10,6))
-plt.plot(range(I), best_pos[:I])
-plt.scatter(range(I), best_pos[:I], c="orange", s=45)
+"""Bock-Aitkin algorithm"""
+beta_init = 0.5 * np.ones((I, 1)); sigma_init = 1.5
+init_value = np.vstack((beta_init, sigma_init)); nodes_num = 21
+betas_t = beta_init; sigma_t = sigma_init
+
+iter_time = 10
+
+for i in range(iter_time):
+    output = fsolve(EM_Rasch, x0=init_value, args=[Y, nodes_num, betas_t, sigma_t])
+    betas_t = output[:-1]
+    sigma_t = output[-1]
+    # print(betas_t)
+    # print(sigma_t)
+
+bock_aitkin = Rasch_MMLE(output.reshape((1, -1)), (Y, 21))
+
+"""Visualization"""
+plt.figure(figsize=(25,8))
+plt.subplot(121)
+plt.plot(range(I+1), best_pos[:], c='dodgerblue', linewidth=2, label="PSO")
+plt.scatter(range(I+1), best_pos[:], c="dodgerblue", s=45)
+plt.scatter(range(I+1), output, c="r", linewidth=1, label="Bock-Aitkin")
+plt.plot(range(I+1), output, c="r")
+plt.legend()
+plt.xlabel("Parameter (beta_1, ..., beta_J, sigma)")
+plt.ylabel("Estimation")
+plt.title("Parameter estimation by PSO with 100 iterations and Bock-Aitkin")
+
+plt.subplot(122)
+plt.plot(optimizer.cost_history, label="PSO", color="dodgerblue")
+plt.scatter(range(len(optimizer.cost_history)), optimizer.cost_history, cmap='summer')
+plt.axhline(y=bock_aitkin, color='r', linestyle='-', label="Bock-Aitkin")
+plt.xlabel("Iteration")
+plt.ylabel("Negative log likelihood")
+plt.legend()
+plt.title("Minimum negative log likelihood found by PSO with 100 iterations and Bock-Aitkin")
+
 plt.show()

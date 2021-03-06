@@ -1566,3 +1566,43 @@ ValueError: operands could not be broadcast together with shapes (100,27) (26,)
  -1.41312569 -0.58228321  0.6779511  -1.06502481 -0.13614213  1.28794
   0.01816219  1.3103604   2.77823832 -0.90022025  0.19127016  1.80478083
   1.36788373 -0.14465332]
+2021-03-06 10:16:31,603 - pyswarms.single.global_best - INFO - Optimize for 300 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2021-03-06 10:16:44,964 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4037.4021523973906, best pos: [-0.91461315 -0.25883967  0.22564647 -1.44158983 -0.40170817  0.29399859
+ -0.22355251  0.99175138  1.83147172 -0.77572892  0.65496342  1.34911079
+ -0.91461277 -0.08377106  1.17646347 -0.56651257  0.36237018  1.78645206
+  0.5166745   1.80887284  3.27675039 -0.40170796  0.68978266  2.30329307
+  1.36788379  0.21978729]
+2021-03-06 10:17:16,325 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2021-03-06 10:17:20,824 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4037.418991127894, best pos: [-1.04232393 -0.37250116  0.11349488 -1.55609235 -0.50973103  0.17226794
+ -0.33675688  0.87516118  1.72154321 -0.89327045  0.53984704  1.23218501
+ -1.03578036 -0.19957504  1.0536785  -0.68827147  0.2508151   1.66428345
+  0.40084066  1.69244181  3.16767201 -0.51563828  0.58420314  2.18272787
+  1.36666363  0.13685679]
+2021-03-06 10:18:54,999 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2021-03-06 10:18:57,709 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4045.6117936337964, best pos: [-1.24882659 -0.58911245 -0.1047963  -1.75175689 -0.72763062 -0.02750442
+ -0.56113122  0.6597453   1.49875108 -1.08779195  0.32478691  1.01664139
+ -1.23469674 -0.40656242  0.84989283 -0.88190556  0.03429425  1.46162419
+  0.18408133  1.47723041  2.92359578 -0.73092139  0.36588022  1.92327112
+  1.27217488 -0.0273539 ]
+2021-03-06 10:23:38,148 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2021-03-06 10:23:40,836 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4045.7721214645153, best pos: [-1.1100785  -0.48150387  0.01063497 -1.65725539 -0.63423063  0.07255488
+ -0.44866892  0.75938732  1.60856805 -0.99834819  0.42467675  1.12999616
+ -1.13442979 -0.30022717  0.95113786 -0.80160223  0.13636929  1.55293547
+  0.28655946  1.5692033   3.01266625 -0.62959591  0.45540632  2.06711677
+  1.27587525  0.38391662]
+2021-03-06 10:38:09,108 - pyswarms.backend.generators - ERROR - Bounds and/or init_pos should be of size (26,)
+Traceback (most recent call last):
+  File "/Users/elviscui/opt/anaconda3/lib/python3.8/site-packages/pyswarms/backend/generators.py", line 65, in generate_swarm
+    np.all(bounds[0] <= init_pos) and np.all(init_pos <= bounds[1])
+ValueError: operands could not be broadcast together with shapes (100,25) (26,) 
+2021-03-06 10:38:19,864 - pyswarms.backend.generators - ERROR - Bounds and/or init_pos should be of size (25,)
+Traceback (most recent call last):
+  File "/Users/elviscui/opt/anaconda3/lib/python3.8/site-packages/pyswarms/backend/generators.py", line 65, in generate_swarm
+    np.all(bounds[0] <= init_pos) and np.all(init_pos <= bounds[1])
+ValueError: operands could not be broadcast together with shapes (100,25) (26,) 
+2021-03-06 10:38:33,967 - pyswarms.single.global_best - INFO - Optimize for 100 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2021-03-06 10:38:36,659 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4046.602656181962, best pos: [-1.33190723 -0.69047071 -0.19144823 -1.86479011 -0.79851835 -0.14092585
+ -0.67741552  0.57364905  1.35125552 -1.22613557  0.2269713   0.89685328
+ -1.34746462 -0.51900348  0.76137022 -0.98870667 -0.0628319   1.33087747
+  0.08906705  1.30580834  2.82440313 -0.81898198  0.28301849  1.81543591
+  1.28971088]
