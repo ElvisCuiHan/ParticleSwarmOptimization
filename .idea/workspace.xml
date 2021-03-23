@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef53d62-8d48-422b-9029-ca7a5d6b0075" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codes/numerical examples/report.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figures/pso_rasch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/pso test-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codes/numerical examples/pso_fct_min_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codes/pseudotime analysis/plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codes/pseudotime analysis/pso_trajectories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codes/pseudotime analysis/report.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/pseudotime/LPS_fit_slingshot.rds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/pseudotime/LPS_sce.rds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/pseudotime/test_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figures/pso_trajectory_6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papers/2007 Defining a Standard for Particle Swarm Optimization.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/numerical examples/pso_gamma_normal_est.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/numerical examples/pso_gamma_normal_est.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/pso_rasch_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/pso_rasch_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/codes/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/pso test2-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/pso test2-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/numerical examples/pso_fct_min_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/numerical examples/pso_fct_min_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/numerical examples/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/codes/numerical examples/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pso test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pso test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pso test2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pso test2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/report.log" afterDir="false" />
     </list>
@@ -59,7 +74,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.pso_gamma_normal_fig (1)">
+  <component name="RunManager" selected="Python.plotting">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Particle Swarm Optimization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,20 +97,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pso_ecology" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Particle Swarm Optimization" />
+    <configuration name="plotting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ParticleSwarmOptimization" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes/pseudotime analysis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/pso_ecology.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/pseudotime analysis/plotting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,8 +119,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pso_gamma_normal_est (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Particle Swarm Optimization" />
+    <configuration name="pso_fct_min_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ParticleSwarmOptimization" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -117,7 +132,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/numerical examples/pso_gamma_normal_est.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/numerical examples/pso_fct_min_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pso_fct_min_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ParticleSwarmOptimization" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes/numerical examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/numerical examples/pso_fct_min_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,42 +185,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pso_gamma_normal_fig" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Particle Swarm Optimization" />
+    <configuration name="pso_trajectories" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ParticleSwarmOptimization" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes/pseudotime analysis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/pso_gamma_normal_fig.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pso_rasch_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Particle Swarm Optimization" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/pso_rasch_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codes/pseudotime analysis/pso_trajectories.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plotting" />
+        <item itemvalue="Python.pso_trajectories" />
+        <item itemvalue="Python.pso_fct_min_2" />
+        <item itemvalue="Python.pso_fct_min_1" />
         <item itemvalue="Python.pso_gamma_normal_fig (1)" />
-        <item itemvalue="Python.pso_gamma_normal_est (1)" />
-        <item itemvalue="Python.pso_rasch_model" />
-        <item itemvalue="Python.pso_gamma_normal_fig" />
-        <item itemvalue="Python.pso_ecology" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +230,12 @@
       <workItem from="1613897655068" duration="22460000" />
       <workItem from="1614410581913" duration="6662000" />
       <workItem from="1614487204575" duration="2186000" />
-      <workItem from="1614489502079" duration="13100000" />
+      <workItem from="1614489502079" duration="13891000" />
+      <workItem from="1616233967718" duration="10938000" />
+      <workItem from="1616468503699" duration="1152000" />
+      <workItem from="1616471444429" duration="1158000" />
+      <workItem from="1616474479680" duration="1338000" />
+      <workItem from="1616481187099" duration="1120000" />
     </task>
     <servers />
   </component>
@@ -226,6 +246,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_gamma_normal_fig__1_.coverage" NAME="pso_gamma_normal_fig (1) Coverage Results" MODIFIED="1614999325229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/numerical examples" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_ecology.coverage" NAME="pso_ecology Coverage Results" MODIFIED="1614502584593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_illustration.coverage" NAME="pso_illustration Coverage Results" MODIFIED="1614225885984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_scad.coverage" NAME="pso_scad Coverage Results" MODIFIED="1614150280972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
@@ -233,11 +254,14 @@
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_gamma_normal.coverage" NAME="pso_gamma_normal Coverage Results" MODIFIED="1614487858297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$main.coverage" NAME="main Coverage Results" MODIFIED="1613825383621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_mat_comp.coverage" NAME="pso_mat_comp Coverage Results" MODIFIED="1614224915785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
-    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_fct_min_1.coverage" NAME="pso_fct_min_1 Coverage Results" MODIFIED="1614406986605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_gamma_normal_fig.coverage" NAME="pso_gamma_normal_fig Coverage Results" MODIFIED="1614754682369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
+    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_fct_min_1.coverage" NAME="pso_fct_min_1 Coverage Results" MODIFIED="1616238854665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/numerical examples" />
+    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1616481984348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/pseudotime analysis" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_gamma_normal_est__1_.coverage" NAME="pso_gamma_normal_est (1) Coverage Results" MODIFIED="1614999186708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/numerical examples" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_fct_min.coverage" NAME="pso_fct_min Coverage Results" MODIFIED="1613912046743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_gamma_normal_est.coverage" NAME="pso_gamma_normal_est Coverage Results" MODIFIED="1614488806229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
+    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_trajectories.coverage" NAME="pso_trajectories Coverage Results" MODIFIED="1616475634426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/pseudotime analysis" />
     <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_test.coverage" NAME="pso_test Coverage Results" MODIFIED="1613911874369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ParticleSwarmOptimization$pso_fct_min_2.coverage" NAME="pso_fct_min_2 Coverage Results" MODIFIED="1616474517987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes/numerical examples" />
   </component>
 </project>
